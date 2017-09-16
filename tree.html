@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Code challenge</title>
+<link href="design.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(function(){
+      $("#includedContent").load("header.html"); 
+    });
+</script>
+</head>
+<body>
+<div id ="includedContent">
+<!--   function nested_employees($employee){
+    echo "<ol>"
+    echo "<a href=\"user/#{employee.id}\">".$employee['name']." (".$employee['title'].")</a>";
+    employee.tree.each do |emp|
+	  echo "<li>".nested_employees($emp)."</li>";
+    end
+    echo "</ol>";    
+  }
+ -->	
+<?php 
+
+  function tree($manager_id){
+  	$query = "select eid, name, title, manager_id as 'managerid', (select name from employees where eid=managerid) as 'manager' from employees where manager_id=".$manager_id;
+  	echo $query."<br>";
+  	$res = mysql_query($query) or die(mysql_error());
+  	$rows = mysql_num_rows($res);
+	$tree = array();
+  	if($rows>0)
+	{
+	$i=0;
+	  while($i<$rows)
+	  {
+	 	$child = array();
+	 	$child['id'] = mysql_result($res, $i, 'eid');
+	 	$child['name'] = mysql_result($res, $i, 'name');
+	 	$child['manager'] = mysql_result($res, $i, 'manager');
+	  	$child['title'] = mysql_result($res, $i, 'title');
+	 	$child['manager_id'] = mysql_result($res, $i, 'managerid');
+	 	$child['tree'] = tree($child['id']);
+	 	$tree = array_merge($tree, $child);
+		$i++;
+	  }
+	}
+	return $tree;
+  }
+
+  $employee_heads = tree(0);
+  echo json_encode($employee_heads);
+?>	
+<h1>Employees</h1>
+<ol>
+<!-- <?php
+for($i=0;$i<$employee_heads.length;$i++){
+	echo "<li>".nested_employees($employee_heads[$i])."</li>";
+}
+?> -->
+<ol>
+
+</div>
+</body>
+
+
+</html>
+

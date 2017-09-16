@@ -1,0 +1,157 @@
+.cleaner {
+            background-color: #283593  ;
+            padding: 30px;
+         }
+         .error {color: #FF0000;}
+#drop
+{
+		    width: 80%;
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 400px;
+            margin-top: 5px;
+            padding: 8px 12px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px 8px 8px 8px;
+            font-size: 18px;
+            color: #111;
+            background-color: #F1F1F1;
+} 
+body{        
+        padding-top: 60px;
+        padding-bottom: 10px;
+        margin-bottom:50px;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+
+    .fixed-header{
+        width: 100%;
+        position: absolute;        
+        background: #333;
+        padding: 0px 0;
+        color: #fff;
+         top: 0;
+    }
+    .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding:10px, 0;
+        color: #fff;
+         bottom:  0px;
+    }
+    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 75px;
+        padding-left: 100px;
+        line-height: 1.3em;
+        display: inline-block;
+    }
+    .container p{
+        line-height: 200px; /* Create scrollbar to test positioning */
+    }
+#link
+{
+    
+    text-align: right;
+    
+    margin-right: 50px;
+}      
+
+#content
+{
+	margin-top: 100px;
+	margin-left: 50px;
+}
+
+#content h1
+{
+	margin-top: 100px;
+	margin-left: 40px;
+	font-size: 40px;
+	font-family: Times ;
+}    
+#content p
+{
+	margin-left: 80px;
+}     
+#menu {
+	float: right;
+	margin-right: 200px; 
+	margin-top: 25px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#menu ul li {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+
+#menu ul li a {
+	float: left;
+	display: block;
+	padding: 0 40px;
+	line-height: 40px;
+	font-size: 22px;
+	text-align: top;
+	text-decoration: none;
+	color: white;	
+	font-weight: 400;
+	outline: none;
+	border-right: 0px solid #816bcb;
+}
+#footer {
+  width: 1358px;
+  position: relative;
+  bottom: 0px;
+  height: 71px;
+  border-top: 8px solid #254A73;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #343434
+}
+
+#menu ul li a:hover, #menu ul li .current { color: black }
+
+#box a
+{	
+
+	background-color: #13228B;
+    color: white;
+    padding: 20px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: 50px;
+
+
+}
+#new a
+{	
+
+    display: inline-block;
+    margin-right: 100px;
+    margin-top: 100px;
+
+
+}
+p{
+    margin-top: 50px;
+    margin-right: 170px;
+
+}
